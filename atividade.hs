@@ -77,13 +77,10 @@ ehPerfeito n
     |otherwise = False
 
 
---5 Considere o algoritmo a seguir que gera uma sequência de números naturais não nulos, a partir de
---um número natural n > 0. Se n for par, divida-o por 2. Se n for ímpar, multiplique-o por 3 e some 1.
---Repita este processo com o novo valor de n, até que ele seja igual a 1, se for possível. Por
---exemplo, para n = 22, a sequência é: 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2 e 1. Para
---cada n, define-se o tamanho do ciclo de n como a quantidade de números da sequência gerada,
---incluindo o número 1. No exemplo acima, o tamanho do ciclo para n = 22 é 16. Defina uma função
---tamciclo(n) que dê como resultado o tamanho do ciclo de n.
+--5 Considere o algoritmo a seguir que gera uma sequência de números naturais não nulos, a partir de um número natural n > 0. Se n for par, divida-o por 2. Se n for ímpar, 
+--multiplique-o por 3 e some 1. Repita este processo com o novo valor de n, até que ele seja igual a 1, se for possível. Por exemplo, para n = 22, a sequência é: 22, 11, 34, 
+--17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2 e 1. Para cada n, define-se o tamanho do ciclo de n como a quantidade de números da sequência gerada, incluindo o número 1. 
+--No exemplo acima, o tamanho do ciclo para n = 22 é 16. Defina uma função tamciclo(n) que dê como resultado o tamanho do ciclo de n.
 
 
 
