@@ -94,3 +94,7 @@ tamCiclo a count
      | a == 1 = count
      | mod a 2 == 0 =  tamCiclo (div a 2) (count + 1)
      | otherwise = tamCiclo ((a*3)+1) (count + 1)
+     
+     
+     
+     
