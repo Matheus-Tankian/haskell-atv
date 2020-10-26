@@ -32,6 +32,67 @@ homePrimo :: Int->Int
 homePrimo x 
     |x < 2 = 0
     |otherwise = ehTeste 2 0 x 
+    
+   
+type Hora = (Int,Int,Int)
+
+--case 1
+
+verificaHora :: (Hora)->Bool
+verificaHora (h,m,s)
+    |((h<=23 && h>=0) && (m<=59 && m>=0) && (s<=59 && s>=0)==True) = True
+    |otherwise = False
+
+
+--case 2
+horaSegundo ::(Hora)->Int
+horaSegundo (h,m,s) = (h*3600)+(m*60)+s
+
+--case 3
+
+
+tempoSegundo :: Int->Int
+tempoSegundo h 
+    |h > 0 = ((mod h 3600) - ((div (mod h 3600 ) 60) *60))
+    |otherwise = h
+
+
+tempoMinuto :: Int->Int
+tempoMinuto h 
+    |h > 0 = (div (mod h 3600) 60) 
+    |otherwise = h
+
+
+tempoHora :: Int->Int
+tempoHora h 
+    |h > 0 = (div h 3600) 
+    |otherwise = h
+
+
+--tempoHoraAux :: Int->Int
+tempoHoraAux t 
+    |t==0 = 0
+    |otherwise = tempoHoraAux t+1 
+
+
+--((div h 3600) (div (mod h 3600) 60) ((mod h 3600) - ((div (mod h 3600 ) 60) *60)))
+
+--type Valor = (Int, Int, Int)
+--case 4
+
+tempo::Int->Hora
+tempo t =((tempoHora t),(tempoMinuto t),(tempoSegundo t))
+
+--case 5
+
+--abs deixa positivo
+
+subtracao::Hora->Hora->Hora
+subtracao t1 t2 = (tempo(abs((horaSegundo t1) - (horaSegundo t2))))
+
+
+
+
 
 
 -- 3 Construa a função fibonacciPrimo :: Int -> Int que retorna o enésimo número primo da sequência de
