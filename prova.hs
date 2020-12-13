@@ -139,19 +139,3 @@ filtraPar f g n m = [(a,b)|a<-n,b<-m,((f a)==True), ((g b)==True)]
 
 selecionaExecuta::(a->Bool)->(a->a)->[a]->[a]
 selecionaExecuta f g l = [g x|x<-l,((f x)==True)]
-
-
-
-
---ex testes
-
---maior ::(b->Bool)->(b->Bool)->[b]->[b]
---maior n m l = [x|x<-l, (((n x)==True) && ((m x)==True) )]
-
-maior ::(a->Bool)->(a->a)->[a]->[a]
-maior n m l = [m x|x<-l, ((n x)==True)]
-
-
---9 e 10 base imcompleta 
---fazPar ::(a->a)->[i]->[j]->[(i,j)]
---fazPar f n m = [(a,b)|a<-n,b<-m]
